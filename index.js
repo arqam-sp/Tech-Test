@@ -73,14 +73,14 @@ informationListing.innerHTML = finalOutput
 // Basic Animations via GSAP
 
 gsap.from(".card", {
-  y: 50,
+  y: 30,
   duration: 0.5,
   delay: 0.5,
   stagger: 0.1,
 })
 
 gsap.from("h1", {
-  y: 50,
+  y: 10,
   duration: 0.5,
   delay: 0.45,
 })
