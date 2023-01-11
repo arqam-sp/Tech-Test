@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 16px;
+}
+
+.page-section {
+  position: relative;
+  padding: 40px 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  background-color: #a12575;
+  min-height: 30vh;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+.hero:after {
+  content: "";
+  display: block;
+  border-left: 100vw solid #a12575;
+  border-top: 0;
+  border-bottom: 17vw solid transparent;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -webkit-calc(-17vw + 1px);
+  bottom: -moz-calc(-17vw + 1px);
+  bottom: calc(-17vw + 1px);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+.list-item {
+  -webkit-box-shadow: 0 20px 31px 0 rgb(0 0 0 / 16%);
+  box-shadow: 0 20px 31px 0 rgb(0 0 0 / 16%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero:after {
+    border-bottom: 10vw solid transparent;
+    bottom: -webkit-calc(-10vw + 1px);
+    bottom: -moz-calc(-10vw + 1px);
+    bottom: calc(-10vw + 1px);
+  }
+}
+
+/* MY CUSTOM CSS */
+
+.card {
+  border-radius: 0.75rem;
+  text-align: center;
+  margin: 1rem auto;
+  width: 90%;
+  background: hsl(0 0% 100%);
+  color: hsl(200 50% 20%);
+  box-shadow: 0 1rem 2rem -0.5rem hsl(200 50% 20% / 20%);
+}
+.card:hover {
+  box-shadow: 0 1rem 2rem -0.5rem hsl(200 50% 20% / 30%);
+}
+.card ul {
+  padding-left: 0;
+}
+.card ul li {
+  list-style: none;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.tag {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.value {
+  font-style: italic;
+}
+
+@media screen and (min-width: 360px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+} */
+
+@media screen and (min-width: 992px) {
+  .list {
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
